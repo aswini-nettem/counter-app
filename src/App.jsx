@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './App.css';
 
 const App = () => {
     const[count, setCount] = useState(0);
@@ -36,9 +37,10 @@ const App = () => {
     }
     
     return(
-        <div>
+        <div className='container'>
+          <div className='card'>
                 <h3>Counter App</h3>
-                <p>Count : {count}</p>
+                <p className='count'>Count : {count}</p>
                <div>
                         <input type="number" value={step} onChange={handleChange}/>
                </div>
@@ -51,6 +53,7 @@ const App = () => {
                        <p>History : {history.join("->")}</p>
                        <p>Previous Value : {prevCount}</p>
                </div>
+          </div>
         </div>
     )
 }
